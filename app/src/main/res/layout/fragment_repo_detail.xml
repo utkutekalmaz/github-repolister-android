@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.repodetails.RepoDetailFragment"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:elevation="20dp"
+    >
+
+    <ImageView
+        android:id="@+id/RepoDetailAvatar"
+        android:layout_width="155dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/githublogo"
+        app:layout_constraintStart_toStartOf="@+id/RepoDetailName"
+        app:layout_constraintTop_toBottomOf="@+id/RepoDetailName" />
+
+    <TextView
+        android:id="@+id/RepoDetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="96dp"
+        android:fontFamily="monospace"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/RepoDetailStarCountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:text="@string/star_count"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/RepoDetailAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/RepoDetailAvatar" />
+
+    <TextView
+        android:id="@+id/RepoDetailOpenIssuesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:text="@string/open_issues"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/RepoDetailStarCountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/RepoDetailStarCountLabel" />
+
+    <TextView
+        android:id="@+id/RepoDetailOwnerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="monospace"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/RepoDetailAvatar"
+        app:layout_constraintTop_toTopOf="@+id/RepoDetailAvatar" />
+
+    <TextView
+        android:id="@+id/RepoDetailStarCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@+id/RepoDetailStarCountLabel"
+        app:layout_constraintTop_toTopOf="@+id/RepoDetailStarCountLabel" />
+
+    <TextView
+        android:id="@+id/RepoDetailOpenIssues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@+id/RepoDetailOpenIssuesLabel"
+        app:layout_constraintTop_toTopOf="@+id/RepoDetailOpenIssuesLabel" />
+
+    <ImageView
+        android:id="@+id/RepoDetailStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/star"
+        app:layout_constraintBottom_toTopOf="@+id/RepoDetailName"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>
